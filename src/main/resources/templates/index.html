@@ -2,20 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">      
+        <meta name="viewport" content="width=device-width, initial-scale=1">     
         <title>ThaiGong Restaurant Website</title>
         
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
 
         <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com/css">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="htttps://fonts.googleapis.com/css2?family=Heebo:wght@400">
+        <link href="htttps://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Pacifico&display=swap">
 
         <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/1.4.0/css/font-awesome.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
@@ -28,63 +28,35 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
 
+
+        <!-- JavaScript-->
+        <script src="./js/includeHTML.js"></script>
     </head>
     <body>
-        <!-- Navber & Hero Starts -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark px-4 px-lg-5 py py-lg-0">
-                <div class="container-fluid">
-                    <a href="" class="navbar-brand p-0">
-                        <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i></h1>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="mynavbar">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a href="" class="nav-item nav-link ">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-item nav-link ">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-item nav-link ">Service</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-item nav-link ">Menu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-item nav-link ">Pages</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-item nav-link ">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book a Table</a>
-                </div>
-            </nav>
+        <!-- NavBar Section Starts-->
+        <div w3-include-html="./navbar.html"></div>
+        <!-- NavBar Section End-->
 
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+        <!-- Hero Starts -->
+        <div class="container--xxl position-relative p-0">
+            <div class="container--xxl py-5 bg-dark hero-header mb-5">
                 <div class="container my-5 py-5">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated sliderInleft">Enjoy Our<br/> Delicious Meal</h1>
-                            <p class="text-white animated sliderInleft mb-4 pb-2">anl;kdlikasli;dkahnljkidbnaslikhnd lahjsdlkhjasl k alsjhdlkasj dl lakjsd ljaa lsjd lkasj d alk;jsd lkjasalsk jdlkasj  lkasjdlk jhaslkash  alslasldjl  lajlks djlaks aslksjn lkajl lkajkl  lakjs ldjala ksnlkd sasl kjdlkalak snl nlkja lknalk nlkasnd lkn aslkdnlkasn  lkasnlkjdn.</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 sliderInleft">Book A Table</a>
+                            <h1 class="display-3 text-white animated slider-in-left">Enjoy Our<br/> Delicious Meal</h1>
+                            <p class="text-white animated slider-in-left mb-4 pb-2">anl;kdlikasli;dkahnljkidbnaslikhnd lahjsdlkhjasl k alsjhdlkasj dl lakjsd ljaa lsjd lkasj d alk;jsd lkjasalsk jdlkasj  lkasjdlk jhaslkash  alslasldjl  lajlks djlaks aslksjn lkajl lkajkl  lakjs ldjala ksnlkd sasl kjdlkalak snl nlkja lknalk nlkasnd lkn aslkdnlkasn  lkasnlkjdn.</p>
+                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 slider-in-left">Book A Table</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                     <img src="img/hero.png" class="img-fluid" alt="">
                 </div>
-
             </div>
         </div>
     </div>
 
-    <!-- Navber & Hero Ends-->
+    <!-- Hero Ends-->
 
     <!-- Service Section Starts -->
     <div class="container-xxl py-5">
@@ -141,21 +113,21 @@
                 <div class="col-lg-6">
                     <div class="row g-3">
                         <div class="col-6 text-start">
-                            <img class="img-gluid rounded w-100 wow zoomIn" src="img\about1.jpg" style="margin-left: 10%;" alt="about1">
+                            <img class="img-fluid rounded w-100 wow zoomIn" src="img\about1.jpg"  alt="about1">
                         </div>
                         <div class="col-6 text-start">
-                            <img class="img-gluid rounded w-75 wow zoomIn" src="img\about2.jpg" style="margin-top:33%" alt="about2">
+                            <img class="img-fluid rounded w-75 wow zoomIn" src="img\about2.jpg" style="margin-top:33%" alt="about2">
                         </div>
                         <div class="col-6 text-end ">
-                            <img class="img-gluid rounded w-75 wow zoomIn" src="img\about3.jpg" style="margin-top:5%; margin-left: 35% " alt="about3">
+                            <img class="img-fluid rounded w-75 wow zoomIn" src="img\about3.jpg"  alt="about3">
                         </div>
                         <div class="col-6 text-end ">
-                            <img class="img-gluid rounded w-100 wow zoomIn" src="img\about4.jpg" style="margin-top:5%" alt="about4">
+                            <img class="img-fluid rounded w-100 wow zoomIn" src="img\about4.jpg"  alt="about4">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
+                    <h5 class="section-title ff-secondary text-start text-primary fw-bolder">About Us</h5>
                     <h1 class="mb-4">Welcome To <i class="fa fa-utensils text-primary me-2"></i> Restaurant</h1>
                     <p class="mb-4">aslnd l;kasnmd lnaalkn  alsklka s lasjknas l alkn as d  asd asd as asd as d asd f ga sf asf as dfas fas f af asf asf as fas fas d as d asd </p>
                     <p class="mb-4">aslnd l;kasnmd lnaalkn  alsklka s lasjknas l alkn as d  asd asd as asd as d asd f ga sf asf as dfas fas f af asf asf as fas fas d as d asd </p>
@@ -172,7 +144,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display text-primary mb-0">50</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0">50</h1>
                                     <div class="ps-4">
                                         <p class="mb-0">Populer</p>
                                         <h6 class="text-uppercase mb-0">Master Chefs</h6>
@@ -197,17 +169,17 @@
                 <h5 class="section-title ff-secondary text-center text-primary">
                     Food Menu
                 </h5>
-                <h1 class="mbn-5">
+                <h1 class="mb-5">
                     Most populer Items
                 </h1>
-                <div ckass="tab-class text-center wow fade-in-up" data-wow-delay="0.1s">
+                <div class="tab-class text-center wow fade-in-up" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li class="nav-item">
                             <a href="" class="d-flex align-items-center text-start mx-3 pb-3">
                                 <i class="fa fa-hamburger fa-2x text-primary"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Special</small>
-                                    <h6 class="mt-n1 mb-0">Launch</h6>
+                                    <h6 class="mt-n1 mb-0">Lunch</h6>
                                 </div>
                             </a>
                         </li>
@@ -476,8 +448,8 @@
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fade-in-up">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3">
-                    <h4>Company</h4>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-shart text-primary fw-normal mb-4">Company</h4>
                     <a href="" class="btn btn-link">About</a>
                     <a href="" class="btn btn-link">Contact Us</a>
                     <a href="" class="btn btn-link">Resvation</a>
@@ -486,7 +458,43 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-3 col-md-6">
+            <h4 class="section-title ff-secondary text-shart text-primary fw-normal mb-4">Connect</h4>
+            <p class="mb-2"><i class="fa fa-map-marker-alt"> </i>123 Regent Wollongong</p>
+            <p class="mb-2"><i class="fa fa-phone-alt"> </i>02-420-63899</p>
+            <div class="d-flex pt-2">
+                <a href="" class="btn btn-outline-light btn-social"> <i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <h4 class="section-title ff-secondary text-shart text-primary fw-normal mb-4">Opening</h4>
+            <h5 class="text-light fw-normal">Monday - Sunday</h5>
+            <p>11AM - 3PM</p>
+            <p>5PM - 9PM</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <h4 class="section-title ff-secondary text-shart text-primary fw-normal mb-4">Newsletter</h4>
+            <p>asdalkdnasljbnd lasnd ljk alnbd ljkasn lan l aslhnldka slkns lkans  aslns </p>
+            <div class="position-relative mx-auto">
+                <input class="form-control border-primary w-100 py-3 ps-4 pee-5" type="text">
+                <button class="btn btn-primary py-2 position-absolute top-0 end-0 me-2">Signup</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 col-lg-12 text-center mb-3 mb-md-0 col-lg-12">
+                        &copy; <a class="border-bottom" href="">Your Site Name, All Right Reserved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Footer Section Ends -->
+
+    <!--  -->
+    <script>
+        includeHTML();
+        </script>
     </body>
 </html>
