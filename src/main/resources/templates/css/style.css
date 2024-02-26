@@ -1,5 +1,3 @@
-@import "custom.scss";
-
 /* Template CSS */
 :root{
     --primary: #FEA116;
@@ -7,10 +5,12 @@
     --dark: #0F172B;
 }
 
-* { font-family: 'Heebo'  }
+* { 
+    font-family: "Pacifico"  , cursive
+}
 
 .ff-secondary{
-    font-family: 'Pacifico', cursive;
+    font-family: 'Dancing-Scrip'
 }
 
 .fw-medium {
@@ -282,4 +282,8 @@ nav.left-navbar-container{
 .footer img{
     max-height: 100px;
     transition: .5s;
+}
+
+.footer .section-title{
+    text-transform:uppercase;
 }
