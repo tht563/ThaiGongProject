@@ -1,9 +1,13 @@
+@import "custom.scss";
+
 /* Template CSS */
 :root{
     --primary: #FEA116;
     --light: #F1F8FF;
     --dark: #0F172B;
 }
+
+* { font-family: 'Heebo'  }
 
 .ff-secondary{
     font-family: 'Pacifico', cursive;
@@ -272,6 +276,10 @@ nav.left-navbar-container{
 .footer{
     background:linear-gradient(rgba(15,23,43,.9), rgba(15,23,43,.9)), url(../img/bg-hero.jpg);
     background-position: center center;
-    background-repeat: no-repeat;
     background-size: cover;
+}
+
+.footer img{
+    max-height: 100px;
+    transition: .5s;
 }
