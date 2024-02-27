@@ -15,35 +15,26 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="address")
+@Table(name="online_order_detail")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Address {
+public class OnlineOrderDetail {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
 	private Long id;
 	
-	@Column(name = "address_line_1", nullable = false, length = 512)
-	private String addressLine1;
-	
-	@Column(name = "address_line_2", length = 512)
-	private String addressLine2;
-	
-	@Column(name = "post_code", nullable = false, length = 10)
-	private String postCode;
-	
-	@Column(name = "city", nullable = false)
-	private String city;
-	
-	@Column(name = "country", nullable = false)
-	private String country;
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "order_id", nullable = false)
+	private OnlineOrder order;
 	
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "user_id", nullable = false)
-	private LocalUser user;
+	@JoinColumn(name = "product_id", nullable = false)
+	private Product product;
 	
+	@Column(name = "quantity", nullable = false)
+	private Integer quantity;
 }

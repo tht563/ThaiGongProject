@@ -1,5 +1,10 @@
 package ThaiGongProject.model;
 
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,35 +21,31 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="address")
+@Table(name="online_order")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Address {
+public class OnlineOrder {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
 	private Long id;
 	
-	@Column(name = "address_line_1", nullable = false, length = 512)
-	private String addressLine1;
-	
-	@Column(name = "address_line_2", length = 512)
-	private String addressLine2;
-	
-	@Column(name = "post_code", nullable = false, length = 10)
-	private String postCode;
-	
-	@Column(name = "city", nullable = false)
-	private String city;
-	
-	@Column(name = "country", nullable = false)
-	private String country;
-	
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "user_id", nullable = false)
 	private LocalUser user;
+	
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "address_id", nullable = false)
+	private LocalUser address;
+	
+	@OneToMany(mappedBy = "order", cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private List<OnlineOrderDetail> quantities = new ArrayList<>();
+	
+	@Column(name = "submited_date", nullable = false)
+	private Date submitedDate;
+	
 	
 }

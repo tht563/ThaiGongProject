@@ -1,8 +1,5 @@
 package ThaiGongProject.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,35 +15,31 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="local_user")
+@Table(name="product")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class LocalUser {
-	
+public class Product {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
 	private Long id;
 	
-	@Column(name = "username", nullable = false, unique = true)
-	private String username;
+	@Column(name = "name", nullable = false)
+	private String name;
 	
-	@Column(name = "password", nullable = false, length = 24)
-	private String password;
+	@Column(name = "description", nullable = false)
+	private String description;
 	
-	@Column(name = "email", nullable = false, unique = true, length = 320)
-	private String email;
+	@Column(name = "price", nullable = false)
+	private double price;
 	
-	@Column(name = "first_name", nullable = false)
-	private String firstName;
+	@Column(name = "vegan_option", nullable = false)
+	private boolean veganOption;
 	
-	@Column(name = "last_name", nullable = false)
-	private String lastName;
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE, orphanRemoval = true)
-	private List<Address> address = new ArrayList<>();
+	@Column(name = "lunch_option", nullable = false)
+	private double lunchOption;
 	
 }
